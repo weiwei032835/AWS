@@ -1,0 +1,1297 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>題庫測試</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .question-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            text-align: left;
+        }
+        .question-container.active {
+            display: block;
+        }
+        .question-container p {
+            margin: 0 0 1em 0;
+            text-indent: 2em; /* First line indent */
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .question-container p + p {
+            text-indent: 2em; /* Align subsequent lines with the first character of the question */
+        }
+        .options {
+            margin-top: 1em; /* Space between question and options */
+            margin-left: 2em; /* Align options with question's first character */
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            margin-top: 1em; /* Space between options and buttons */
+            text-align: center;
+        }
+        .buttons button {
+            margin: 0 5px;
+        }
+        .result {
+            margin-top: 1em;
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="question-container" id="question-1">
+        <p>问题 1 一家公司希望利用历史产品图像来为其产品图像分类定制卷标。以下哪些步骤的组合能满足这一要求？（选择两项）</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q1" value="A"> A.	在 Amazon Textract 中创建训练模型项目。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q1" value="B"> B.	在 Amazon Rekognition 中创建训练模型项目。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q1" value="C"> C.	将未标注的历史图像提供给模型训练。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q1" value="D"> D.	按类别标记历史图像并将已标记的图像提供给模型训练。
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(1, ['B', 'D'])">確定</button>
+            <button onclick="nextQuestion(1)">下一題</button>
+        </div>
+        <div class="result" id="result-1"></div>
+    </div>
+    
+    <div class="question-container" id="question-2">
+        <p>问题 2 哪种 AWS 服务可以检测存储于 PNG 格式的发票中的文本和手写内容？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q2" value="A"> A.	Amazon Polly
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q2" value="B"> B.	Amazon Textract
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q2" value="C"> C.	Amazon Kendra
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q2" value="D"> D.	Amazon Comprehend
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(2, ['B'])">確定</button>
+            <button onclick="nextQuestion(2)">下一題</button>
+        </div>
+        <div class="result" id="result-2"></div>
+    </div>
+    
+    <div class="question-container" id="question-3">
+        <p>问题 3 为了提高特定领域语音的转录准确性，应采用哪种解决方案？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q3" value="A"> A.	在 Amazon Lex 中使用自定义机器人。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q3" value="B"> B.	在 Amazon Translate 中使用自定义语言模型。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q3" value="C"> C.	在 Amazon Transcribe 中使用批量语言识别。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q3" value="D"> D.	在 Amazon Transcribe 中使用自定义语言模型。
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(3, ['D'])">確定</button>
+            <button onclick="nextQuestion(3)">下一題</button>
+        </div>
+        <div class="result" id="result-3"></div>
+    </div>
+    
+    <div class="question-container" id="question-4">
+        <p>问题 4 一家公司希望使用生成式 AI 为其网站创建产品描述。该公司应了解生成式 AI 的哪些局限性？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q4" value="A"> A.	生成式 AI 模型可能会产生有偏见或不适当的内容，需要人工审查和编辑。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q4" value="B"> B.	生成式 AI 无法处理产品描述所需的大量数据。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q4" value="C"> C.	生成式 AI 无法生成电子商务网站所需的多语言文本。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q4" value="D"> D.	生成式 AI 模型缺乏理解和整合产品规格与细节的能力。
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(4, ['A'])">確定</button>
+            <button onclick="nextQuestion(4)">下一題</button>
+        </div>
+        <div class="result" id="result-4"></div>
+    </div>
+    
+    <div class="question-container" id="question-5">
+        <p>问题 5 一家公司拥有用于 AI 应用程序的容器化前端应用程序。该公司必须实施一个解决方案，以评估其 AWS 环境的安全状况，并识别潜在的安全漏洞（包括 Amazon EC2   
+                  实例和 Amazon Elastic Container Registry (ECR) 存储库）。该解决方案还应提供修复建议。 哪项 AWS 服务可以满足这些要求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q5" value="A"> A.	AWS CloudTrail
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q5" value="B"> B.	AWS Config
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q5" value="C"> C.	Amazon Inspector
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q5" value="D"> D.	AWS Artifact
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(5, ['C'])">確定</button>
+            <button onclick="nextQuestion(5)">下一題</button>
+        </div>
+        <div class="result" id="result-5"></div>
+    </div>
+    
+    <div class="question-container" id="question-6">
+        <p>问题 6 在生成式 AI 的背景下，什么是基础模型（Foundation Model, FM）？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q6" value="A"> A.	一个针对财务或医疗等狭窄领域训练的任务专用模型，可作为该领域的基础。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q6" value="B"> B.	一个大型通用模型，预先在多样化数据集上训练，并可针对下游任务进行微调。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q6" value="C"> C.	用于理解不同模型如何学习表示的理论框架。
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q6" value="D"> D.	作为设计更复杂神经网络的起点的基本架构。
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(6, ['B'])">確定</button>
+            <button onclick="nextQuestion(6)">下一題</button>
+        </div>
+        <div class="result" id="result-6"></div>
+    </div>
+    
+    <div class="question-container" id="question-7">
+        <p>问题 7 指令式微调（Instruction-based Fine-tuning）的有效数据格式是什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q7" value="A"> A.	按类别标记的图像
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q7" value="B"> B.	精选推荐音乐的播放列表
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q7" value="C"> C.	提示-响应文本对
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q7" value="D"> D.	带有转录的音频文件
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(7, ['C'])">確定</button>
+            <button onclick="nextQuestion(7)">下一題</button>
+        </div>
+        <div class="result" id="result-7"></div>
+    </div>
+    
+    <div class="question-container" id="question-8">
+        <p>问题 8 一家公司正在 AWS 上部署解决方案，以使用语义搜索功能增强其知识库，并计划将该解决方案与 Amazon Bedrock 集成。 该公司可以使用哪项 AWS 服务来保护对   
+                  Amazon Bedrock 的访问？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q8" value="A"> A.	Amazon Macie
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q8" value="B"> B.	Amazon Rekognition
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q8" value="C"> C.	AWS 身份与访问管理（IAM）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q8" value="D"> D.	AWS Config
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(8, ['C'])">確定</button>
+            <button onclick="nextQuestion(8)">下一題</button>
+        </div>
+        <div class="result" id="result-8"></div>
+    </div>
+    
+    <div class="question-container" id="question-9">
+        <p>问题 9 一家金融公司希望使用开源基础模型（Foundation Model, FM）来评估信用合同是否符合合规规则，并减少人工审核的工作量。 
+                  哪项 AWS 服务可以满足这些要求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q9" value="A"> A.	Amazon SageMaker JumpStart
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q9" value="B"> B.	Amazon Textract
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q9" value="C"> C.	Amazon Kendra
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q9" value="D"> D.	Amazon Q Business
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(9, ['A'])">確定</button>
+            <button onclick="nextQuestion(9)">下一題</button>
+        </div>
+        <div class="result" id="result-9"></div>
+    </div>
+    
+    <div class="question-container" id="question-10">
+        <p>问题 10 请按从「最低延迟」到「最高延迟」的顺序排列以下 Amazon SageMaker 推理选项（每个选项选择一次）。（选择并排序三项） 
+                   1.	批量转换（Batch transform） 2.	实时推理（Real-time inference） 3.	异步推理（Asynchronous inference） </p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q10" value="A"> A. 123 
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q10" value="B"> B. 321
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q10" value="C"> C. 231
+        </label>
+        
+        </label>
+            <input type="checkbox" name="q11" value="D"> D. 132
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(10, ['C'])">確定</button>
+            <button onclick="nextQuestion(10)">下一題</button>
+        </div>
+        <div class="result" id="result-10"></div>
+    </div>
+    
+    <div class="question-container" id="question-11">
+        <p>问题 11 一个数据科学团队希望改进模型性能，计划增加训练数据集中的变量数量，并修改算法行为。
+                   以下哪些机器学习管道步骤可以满足这些需求？（选择两项）</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q11" value="A"> A.	超参数调优（Hyperparameter tuning）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q11" value="B"> B.	模型评估（Model evaluation）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q11" value="C"> C.	特征工程（Feature engineering）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q11" value="D"> D.	模型监控（Model monitoring）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q11" value="E"> E.	数据收集（Data collection）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(11, ['C', 'A'])">確定</button>
+            <button onclick="nextQuestion(11)">下一題</button>
+        </div>
+        <div class="result" id="result-11"></div>
+    </div>
+    
+    <div class="question-container" id="question-12">
+        <p>问题 12 一家公司希望通过提供外部知识源来提高大语言模型（LLM）生成响应的一致 性和质量。 哪种技术能以最少的开发工作量满足这一需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q12" value="A"> A.	微调（Fine-tuning）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q12" value="B"> B.	检索增强生成（Retrieval-Augmented Generation, RAG）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q12" value="C"> C.	基于上下文学习（In-context learning）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q12" value="D"> D.	提示工程（Prompt engineering）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(12, ['B'])">確定</button>
+            <button onclick="nextQuestion(12)">下一題</button>
+        </div>
+        <div class="result" id="result-12"></div>
+    </div>
+    
+    <div class="question-container" id="question-13">
+        <p>问题 13 一家公司正在使用基础模型（FM）构建生成式 AI 应用程序。该公司决定使用专有数据集定制自己的 FM，而不是使用预训练模型。 定制 FM 有哪些权衡？（选择两项）</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q13" value="A"> A.	增加幻觉风险（Hallucination risk）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q13" value="B"> B.	降低准确性
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q13" value="C"> C.	更高的延迟
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q13" value="D"> D.	更高的成本
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q13" value="E"> E.	更高的实现复杂性
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(13, ['D', 'E'])">確定</button>
+            <button onclick="nextQuestion(13)">下一題</button>
+        </div>
+        <div class="result" id="result-13"></div>
+    </div>
+    
+    <div class="question-container" id="question-14">
+        <p>问题 14 一家公司希望记录对 Amazon Bedrock 的 API 调用，以满足合规要求。这些日志需包括 API 调用、调用用户及调用时间。 哪项 AWS 服务可以满足这些要求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q14" value="A"> A.	Amazon Inspector
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q14" value="B"> B.	Amazon CloudWatch
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q14" value="C"> C.	AWS Trusted Advisor
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q14" value="D"> D.	AWS CloudTrail
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(14, ['D'])">確定</button>
+            <button onclick="nextQuestion(14)">下一題</button>
+        </div>
+        <div class="result" id="result-14"></div>
+    </div>
+    
+    <div class="question-container" id="question-15">
+        <p>问题 15 一家旅游公司希望使用预训练的生成式 AI 模型来生成用于营销材料的背景图像。该公司缺乏机器学习专业知识，且不希望定制和托管机器学习模型。 哪项 AWS 服务可以满足这些需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q15" value="A"> A.	Amazon Bedrock
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q15" value="B"> B.	Amazon SageMaker JumpStart
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q15" value="C"> C.	Amazon Rekognition
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q15" value="D"> D.	Amazon Personalize
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(15, ['A'])">確定</button>
+            <button onclick="nextQuestion(15)">下一題</button>
+        </div>
+        <div class="result" id="result-15"></div>
+    </div>
+    
+    <div class="question-container" id="question-16">
+        <p>问题 16 一家使用 Amazon SageMaker 进行机器学习模型管理的公司希望为模型所有者创建一个解决方案，以记录模型信息（包括预期用途、风险评级、训练细节和评估结果）。 哪项 SageMaker 功能可以满足这些需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q16" value="A"> A.	SageMaker Role Manager
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q16" value="B"> B.	SageMaker Model Cards
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q16" value="C"> C.	SageMaker Model Dashboard
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q16" value="D"> D.	SageMaker Model Monitor
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(16, ['B'])">確定</button>
+            <button onclick="nextQuestion(16)">下一題</button>
+        </div>
+        <div class="result" id="result-16"></div>
+    </div>
+    
+    <div class="question-container" id="question-17">
+        <p>问题 18 一家公司希望评估生成文本的基础模型（FM）的性能。哪种技术或指标可以满足这些需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q17" value="A"> A.	强化学习（Reinforcement learning）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q17" value="B"> B.	F1 分数（F1 score）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q17" value="C"> C.	基于摘要生成的回忆导向评估（ROUGE）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q17" value="D"> D.	微调（Fine-tuning）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(17, ['C'])">確定</button>
+            <button onclick="nextQuestion(17)">下一題</button>
+        </div>
+        <div class="result" id="result-17"></div>
+    </div>
+    
+    <div class="question-container" id="question-18">
+        <p>问题 19 一家营销公司希望为其电子商务客户的网站生成个性化的产品描述。哪种提示工程技术能以最少的运营工作量满足这些需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q18" value="A"> A.	使用几次示例的提示（Few-shot prompting）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q18" value="B"> B.	无需示例的零次提示（Zero-shot prompting）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q18" value="C"> C.	根据客户参与度指标优化描述的微调（Fine-tuning）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q18" value="D"> D.	在不同领域继续预训练（Continued pre-training）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(18, ['A'])">確定</button>
+            <button onclick="nextQuestion(18)">下一題</button>
+        </div>
+        <div class="result" id="result-18"></div>
+    </div>
+    
+    <div class="question-container" id="question-19">
+        <p>问题 20 一名数据科学家发现某个模型在训练数据上的准确性很高，但在测试数据上的准确性较低。 导致这种结果的原因是什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q19" value="A"> A.	训练时间不足
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q19" value="B"> B.	欠拟合（Underfitting）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q19" value="C"> C.	训练数据过多
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q19" value="D"> D.	过拟合（Overfitting）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(19, ['D'])">確定</button>
+            <button onclick="nextQuestion(19)">下一題</button>
+        </div>
+        <div class="result" id="result-19"></div>
+    </div>
+    
+    <div class="question-container" id="question-20">
+        <p>问题 21 人类利用智慧可以操控什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q20" value="A"> A.	环境（Environment）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q20" value="B"> B.	空间（Space）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q20" value="C"> C.	目标（Objective）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q20" value="D"> D.	任务（Mission）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(20, ['A'])">確定</button>
+            <button onclick="nextQuestion(20)">下一題</button>
+        </div>
+        <div class="result" id="result-20"></div>
+    </div>
+    
+    <div class="question-container" id="question-21">
+        <p>问题 22 反射代理（Reflex Agents）和基于模型的反射代理（Model-based Reflex Agents）是什么的类型？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q21" value="A"> A.	机器人（Robot）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q21" value="B"> B.	人工智能代理（Artificial Intelligent Agents）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q21" value="C"> C.	算法（Algorithms）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q21" value="D"> D.	编译程序（Compilers）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(21, ['B'])">確定</button>
+            <button onclick="nextQuestion(21)">下一題</button>
+        </div>
+        <div class="result" id="result-21"></div>
+    </div>
+    
+    <div class="question-container" id="question-22">
+        <p>问题 23 根据人工智能伦理指南，「自主原则」（Principle of Autonomy）是什么意思？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q22" value="A"> A.	机器人拥有自由意志
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q22" value="B"> B.	人工智能代理的行为如同人类
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q22" value="C"> C.	人工智能系统将以人为中心
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q22" value="D"> D.	人工智能系统将保持人类自主权
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(22, ['D'])">確定</button>
+            <button onclick="nextQuestion(22)">下一題</button>
+        </div>
+        <div class="result" id="result-22"></div>
+    </div>
+    
+    <div class="question-container" id="question-23">
+        <p>问题 24 以人为中心的可信人工智能需要什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q23" value="A"> A.	通过质量保证认证
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q23" value="B"> B.	持续评估和监控
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q23" value="C"> C.	财务上可持续发展
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q23" value="D"> D.	经过人类测试
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(23, ['B'])">確定</button>
+            <button onclick="nextQuestion(23)">下一題</button>
+        </div>
+        <div class="result" id="result-23"></div>
+    </div>
+    
+    <div class="question-container" id="question-24">
+        <p>问题 25 可持续发展关注于哪三个核心领域？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q24" value="A"> A.	科学、环境与经济
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q24" value="B"> B.	社会、经济与环境
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q24" value="C"> C.	社会、经济与创业
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q24" value="D"> D.	社会、创业与环境
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(24, ['B'])">確定</button>
+            <button onclick="nextQuestion(24)">下一題</button>
+        </div>
+        <div class="result" id="result-24"></div>
+    </div>
+    
+    <div class="question-container" id="question-25">
+        <p>问题 26 欧盟和联合国将为所有人设计列为核心原则。这种类型的设计被称为什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q25" value="A"> A.	核心设计（Core design）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q25" value="B"> B.	通用设计（Universal design）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q25" value="C"> C.	生物亲和设计（Biophilic design）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q25" value="D"> D.	乌托邦设计（Utopic design）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(25, ['B'])">確定</button>
+            <button onclick="nextQuestion(25)">下一題</button>
+        </div>
+        <div class="result" id="result-25"></div>
+    </div>
+    
+    <div class="question-container" id="question-26">
+        <p>问题 27 人工智能对于第四次工业革命快速发展的主要贡献是什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q26" value="A"> A.	增强设计（Enhanced design）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q26" value="B"> B.	自动化（Automation）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q26" value="C"> C.	大数据（Big Data）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q26" value="D"> D.	人工智能个人助理（AI personal assistants）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(26, ['B'])">確定</button>
+            <button onclick="nextQuestion(26)">下一題</button>
+        </div>
+        <div class="result" id="result-26"></div>
+    </div>
+    
+    <div class="question-container" id="question-27">
+        <p>问题 28 谁是计算器编程的先驱？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q27" value="A"> A.	温迪·霍尔（Dame Wendy Hall）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q27" value="B"> B.	凯伦·斯帕克·琼斯（Karen Spark Jones）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q27" value="C"> C.	埃达·洛芙莱斯（Ada Lovelace）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q27" value="D"> D.	索菲·威尔逊（Sophie Wilson）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(27, ['C'])">確定</button>
+            <button onclick="nextQuestion(27)">下一題</button>
+        </div>
+        <div class="result" id="result-27"></div>
+    </div>
+    
+    <div class="question-container" id="question-28">
+        <p>问题 29 一家公司希望根据基因特征将人类基因分类为 20 个类别。该公司需要一种机器学习算法，能够记录模型内部机制如何影响输🎧。 哪种机器学习算法可以满足这些需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q28" value="A"> A.	判定树（Decision Trees）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q28" value="B"> B.	线性回归（Linear Regression）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q28" value="C"> C.	逻辑回归（Logistic Regression）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q28" value="D"> D.	神经网络（Neural Networks）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(28, ['A'])">確定</button>
+            <button onclick="nextQuestion(28)">下一題</button>
+        </div>
+        <div class="result" id="result-28"></div>
+    </div>
+    
+    <div class="question-container" id="question-29">
+        <p>问题 30 一个人工智能代理依赖于其感知输入，这被称为什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q29" value="A"> A.	位置（Position）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q29" value="B"> B.	环境（Environment）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q29" value="C"> C.	世界（World）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q29" value="D"> D.	感知（Percept）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(29, ['D'])">確定</button>
+            <button onclick="nextQuestion(29)">下一題</button>
+        </div>
+        <div class="result" id="result-29"></div>
+    </div>
+    
+    <div class="question-container" id="question-30">
+        <p>问题 31 基于代理的模型是一种仿真自主代理（个体和集体）的方法。可以用什么来从仿真生成的数据中学习？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q30" value="A"> A.	Paraview
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q30" value="B"> B.	机器学习（Machine Learning）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q30" value="C"> C.	Python
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q30" value="D"> D.	电子表格（Spreadsheet）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(30, ['B'])">確定</button>
+            <button onclick="nextQuestion(30)">下一題</button>
+        </div>
+        <div class="result" id="result-30"></div>
+    </div>
+    
+    <div class="question-container" id="question-31">
+        <p>问题 32 一家律师事务所希望使用大语言模型（LLM）构建一个应用程序，用于阅读法律文档并提取关键要点。 哪种解决方案可以满足这些需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q31" value="A"> A.	建立一个自动命名实体识别系统
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q31" value="B"> B.	创建一个推荐引擎
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q31" value="C"> C.	开发一个摘要生成聊天机器人
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q31" value="D"> D.	开发一个多语言翻译系统
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(31, ['C'])">確定</button>
+            <button onclick="nextQuestion(31)">下一題</button>
+        </div>
+        <div class="result" id="result-31"></div>
+    </div>
+    
+    <div class="question-container" id="question-32">
+        <p>问题 33 计算器科学家和经济学家使用什么术语来描述一个代理的「幸福感」？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q32" value="A"> A.	指数（Index）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q32" value="B"> B.	温暖感（Warm）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q32" value="C"> C.	回报（Return）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q32" value="D"> D.	效用（Utility）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(32, ['D'])">確定</button>
+            <button onclick="nextQuestion(32)">下一題</button>
+        </div>
+        <div class="result" id="result-32"></div>
+    </div>
+    
+    <div class="question-container" id="question-33">
+        <p>问题 34 机器学习如何使机器人具备自主性？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q33" value="A"> A.	使用光学字符识别（OCR）阅读文档
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q33" value="B"> B.	使用自然语言处理（NLP）进行语音处理
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q33" value="C"> C.	使用执行器改变其环境
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q33" value="D"> D.	从传感器数据中学习并计划完成任务
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(33, ['D'])">確定</button>
+            <button onclick="nextQuestion(33)">下一題</button>
+        </div>
+        <div class="result" id="result-33"></div>
+    </div>
+    
+    <div class="question-container" id="question-34">
+        <p>问题 35 什么被定义为能自动执行一系列复杂任务的机器？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q34" value="A"> A.	机器人（Robot）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q34" value="B"> B.	生产线（Production Line）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q34" value="C"> C.	计算器（Computer）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q34" value="D"> D.	自主车辆（Autonomous Vehicle）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(34, ['C'])">確定</button>
+            <button onclick="nextQuestion(34)">下一題</button>
+        </div>
+        <div class="result" id="result-34"></div>
+    </div>
+    
+    <div class="question-container" id="question-35">
+        <p>问题 36 什么被定义为一组特定问题的方法或假设？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q35" value="A"> A.	方法（Approach）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q35" value="B"> B.	集合（Set）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q35" value="C"> C.	范式（Paradigm）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q35" value="D"> D.	算法（Algorithm）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(35, ['C'])">確定</button>
+            <button onclick="nextQuestion(35)">下一題</button>
+        </div>
+        <div class="result" id="result-35"></div>
+    </div>
+    
+    <div class="question-container" id="question-36">
+        <p>问题 37 智能机器人使用人工智能做什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q36" value="A"> A.	感知、计划和行动（Sense, plan and act）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q36" value="B"> B.	计划、行动和讲话（Plan, act and speak）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q36" value="C"> C.	感知、计划和行动（Perceive, plan and act）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q36" value="D"> D.	感知、计划和移动（Sense, plan and move）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(36, ['C'])">確定</button>
+            <button onclick="nextQuestion(36)">下一題</button>
+        </div>
+        <div class="result" id="result-36"></div>
+    </div>
+    
+    <div class="question-container" id="question-37">
+        <p>问题 38 什么是智能机器人？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q37" value="A"> A.	拥有意识的机器人
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q37" value="B"> B.	行为像人类的机器人
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q37" value="C"> C.	使用人工智能技术的机器人
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q37" value="D"> D.	代替人类工作的机器人
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(37, ['C'])">確定</button>
+            <button onclick="nextQuestion(37)">下一題</button>
+        </div>
+        <div class="result" id="result-37"></div>
+    </div>
+    
+    <div class="question-container" id="question-38">
+        <p>问题 39 一家公司开发了一个聊天机器人，能用自然语言回答问题并返回图片。该公司希望确保聊天机器人不返回不适当或不需要的图片。 哪种解决方案可以满足这些需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q38" value="A"> A.	实施内容审核 API（Moderation APIs）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q38" value="B"> B.	使用通用公共数据集重新训练模型
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q38" value="C"> C.	执行模型验证
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q38" value="D"> D.	自动整合用户反馈
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(38, ['A'])">確定</button>
+            <button onclick="nextQuestion(38)">下一題</button>
+        </div>
+        <div class="result" id="result-38"></div>
+    </div>
+    
+    <div class="question-container" id="question-39">
+        <p>问题 40 一家公司正在训练一个基础模型（FM），希望将模型的准确性提升到特定的接受水平。 哪种解决方案可以满足这些需求？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q39" value="A"> A.	减少批量大小（Batch size）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q39" value="B"> B.	增加训练迭代次数（Epochs）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q39" value="C"> C.	减少训练迭代次数（Epochs）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q39" value="D"> D.	增加温度参数（Temperature parameter）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(39, ['B'])">確定</button>
+            <button onclick="nextQuestion(39)">下一題</button>
+        </div>
+        <div class="result" id="result-39"></div>
+    </div>
+    
+    <div class="question-container" id="question-40">
+        <p>问题 41 一家大型零售商每天收到数千条有关产品的客户支持查询，这些查询需要快速处理和响应。该公司希望实施适用于 Amazon Bedrock 的代理。 使用 Amazon Bedrock 代理的主要好处是什么？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q40" value="A"> A.	生成自定义基础模型（FM），以预测客户需求
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q40" value="B"> B.	自动化重复任务并协调复杂工作流程
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q40" value="C"> C.	自动调用多个基础模型并整合结果
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q40" value="D"> D.	基于预定义标准和指针选择基础模型
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(40, ['B'])">確定</button>
+            <button onclick="nextQuestion(40)">下一題</button>
+        </div>
+        <div class="result" id="result-40"></div>
+    </div>
+    
+    <div class="question-container" id="question-41">
+        <p>问题 42 一家公司构建了一个图像分类模型，用于预测植物叶片照片中的植物疾病。该公司希望评估模型正确分类的图片数量。 应使用哪种评估指针来测量模型性能？</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q41" value="A"> A.	R 平方分数（R-squared score）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q41" value="B"> B.	准确率（Accuracy）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q41" value="C"> C.	均方根误差（Root Mean Squared Error, RMSE）
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q41" value="D"> D.	学习率（Learning Rate）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(41, ['B'])">確定</button>
+            <button onclick="nextQuestion(41)">下一題</button>
+        </div>
+        <div class="result" id="result-41"></div>
+    </div>
+    
+    <div class="question-container" id="question-42">
+        <p>问题 43 一家会计师事务所希望实施一个大语言模型（LLM）来自动化文档处理。该事务所必须负责任地开发和部署 LLM，以避免潜在的危害。 在开发和部署 LLM 时应该采取哪些措施？（选择两项）</p>
+        <div class="options">
+    
+        <label>
+            <input type="checkbox" name="q42" value="A"> A.	包括公平性指针以评估模型
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q42" value="B"> B.	调整模型的温度参数
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q42" value="C"> C.	修改训练数据以减轻偏见
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q42" value="D"> D.	避免在训练数据中🎧现过拟合
+        </label>
+        
+        <label>
+            <input type="checkbox" name="q42" value="E"> E.	应用提示工程技术（Prompt engineering）
+        </label>
+        
+        </div>
+        <div class="buttons">
+            <button onclick="checkAnswer(42, ['A','C'])">確定</button>
+            <button onclick="nextQuestion(42)">下一題</button>
+        </div>
+        <div class="result" id="result-42"></div>
+    </div>
+    
+<script>
+let currentQuestion = 1;
+const totalQuestions = document.querySelectorAll('.question-container').length;
+
+function showQuestion(questionId) {
+    document.querySelectorAll('.question-container').forEach(container => container.classList.remove('active'));
+    const questionElement = document.getElementById(`question-${questionId}`);
+    if (questionElement) {
+        questionElement.classList.add('active');
+    }
+}
+
+function checkAnswer(questionId, correctAnswers) {
+    const selectedOptions = Array.from(document.querySelectorAll(`#question-${questionId} input:checked`))
+        .map(option => option.value.trim());
+    const resultElement = document.getElementById(`result-${questionId}`);
+    
+    if (JSON.stringify(selectedOptions.sort()) === JSON.stringify(correctAnswers.sort())) {
+        resultElement.textContent = "正確";
+        resultElement.className = "result correct";
+    } else {
+        resultElement.textContent = "錯誤";
+        resultElement.className = "result incorrect";
+    }
+}
+
+function nextQuestion(currentId) {
+    if (currentId < totalQuestions) {
+        showQuestion(currentId + 1);
+    } else {
+        alert('所有題目已完成！');
+    }
+}
+
+// Initialize the first question display
+showQuestion(1);
+</script>
+
+</body>
+</html>
